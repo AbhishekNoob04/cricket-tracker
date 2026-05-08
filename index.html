@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    My Cricket Career
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+      <h1>
+        🏏 My Cricket Career
+      </h1>
+
+      <p>
+        IPL Style Personal Analytics
+      </p>
+
+    </header>
+
+    <!-- CAREER DASHBOARD -->
+
+    <section class="dashboard">
+
+      <div class="card">
+
+        <h2 id="careerRuns">0</h2>
+
+        <p>Career Runs</p>
+
+      </div>
+
+      <div class="card">
+
+        <h2 id="careerAverage">0.00</h2>
+
+        <p>Average</p>
+
+      </div>
+
+      <div class="card">
+
+        <h2 id="careerStrikeRate">0.00</h2>
+
+        <p>Strike Rate</p>
+
+      </div>
+
+  
+      <div class="card">
+  <h2 id="careerMatches">0</h2>
+  <p>Matches</p>
+
+  <div class="mini-stats">
+    <span>4s: <b id="careerFours">0</b></span>
+    <span>6s: <b id="careerSixes">0</b></span>
+  </div>
+</div>
+    
+
+    </section>
+
+    <!-- MATCH DETAILS -->
+
+    <section class="match-form">
+
+      <input
+        type="text"
+        id="opponent"
+        placeholder="Opponent Team"
+      >
+
+      <input
+        type="text"
+        id="location"
+        placeholder="Match Location"
+      >
+
+      <input
+        type="date"
+        id="matchDate"
+      >
+
+    </section>
+
+    <!-- CONDITIONS -->
+
+    <section class="conditions">
+
+      <select id="ballCondition">
+
+        <option value="">
+          Ball Condition
+        </option>
+
+        <option>
+          New Ball
+        </option>
+
+        <option>
+          Old Ball
+        </option>
+
+      </select>
+
+      <select id="ballColor">
+
+        <option value="">
+          Ball Color
+        </option>
+
+        <option>
+          Red
+        </option>
+
+        <option>
+          Green
+        </option>
+
+        <option>
+          pink/green
+        </option>
+
+        <option>
+          Tennis
+        </option>
+
+        <option>
+          Tape Ball
+        </option>
+
+      </select>
+
+      <select id="boundaryType">
+
+        <option value="">
+          Boundary Type
+        </option>
+
+        <option>
+          Short Boundary
+        </option>
+
+        <option>
+          Long Boundary
+        </option>
+
+        <option>
+          Balanced Boundary
+        </option>
+
+      </select>
+
+    </section>
+
+    <!-- LIVE SCORE -->
+
+    <section class="score-box">
+
+      <h2 id="scoreText">
+        0* (0)
+      </h2>
+
+      <p id="strikeRateText">
+        SR: 0.00
+      </p>
+
+      <div id="timeline">
+
+        No Balls Yet
+
+      </div>
+
+    </section>
+
+    <!-- RUN BUTTONS -->
+
+    <section class="buttons">
+
+      <button onclick="addBall(0)">0</button>
+
+      <button onclick="addBall(1)">1</button>
+
+      <button onclick="addBall(2)">2</button>
+
+      <button onclick="addBall(3)">3</button>
+
+      <button onclick="addBall(4)">4</button>
+
+      <button onclick="addBall(6)">6</button>
+
+    </section>
+
+    <!-- EXTRAS -->
+
+    <section class="extras">
+
+      <button onclick="addWide()">
+        WD
+      </button>
+
+      <button onclick="addNoBall()">
+        NB
+      </button>
+
+      <button onclick="addBye()">
+        B
+      </button>
+
+      <button onclick="addLegBye()">
+        LB
+      </button>
+
+    </section>
+
+    <!-- DISMISSAL -->
+
+    <section class="dismissal-section">
+
+      <select id="dismissalType">
+
+        <option value="">
+          Dismissal Type
+        </option>
+
+        <option>
+          Bowled
+        </option>
+
+        <option>
+          Caught
+        </option>
+
+        <option>
+          LBW
+        </option>
+
+        <option>
+          Run Out
+        </option>
+
+        <option>
+          Stumped
+        </option>
+
+      </select>
+
+      <input
+        type="text"
+        id="outBy"
+        placeholder="Out By"
+      >
+
+      <button
+        class="out-btn"
+        onclick="markOut()"
+      >
+        Mark Out
+      </button>
+
+    </section>
+
+    <!-- ACTIONS -->
+
+    <section class="actions">
+
+      <button onclick="undoBall()">
+        Undo
+      </button>
+
+      <button onclick="clearInnings()">
+        Clear
+      </button>
+
+      <button onclick="saveMatch()">
+        Save Match
+      </button>
+
+    </section>
+
+    <!-- SAVED MATCHES -->
+
+    <section>
+
+      <h2 class="section-title">
+        Match Records
+      </h2>
+
+      <div id="matchesContainer"></div>
+
+    </section>
+
+  </div>
+  
+
+  <script src="script.js"></script>
+
+</body>
+</html>
